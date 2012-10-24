@@ -1,0 +1,60 @@
+Return-Path: <keraml@gmail.com>
+X-Original-To: keram@trip.sk
+Delivered-To: keram@core.nethemba.com
+Received: from localhost (localhost [127.0.0.1])
+	by core.nethemba.com (Postfix) with ESMTP id B75521407C5
+	for <keram@trip.sk>; Sun, 21 Oct 2012 23:17:47 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at core.nethemba.com
+Received: from core.nethemba.com ([127.0.0.1])
+	by localhost (core.nethemba.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id xNBa9cnN4H8o for <keram@trip.sk>;
+	Sun, 21 Oct 2012 23:17:43 +0200 (CEST)
+Received: from mail-qa0-f51.google.com (mail-qa0-f51.google.com [209.85.216.51])
+	by core.nethemba.com (Postfix) with ESMTPS
+	for <keram@trip.sk>; Sun, 21 Oct 2012 23:17:34 +0200 (CEST)
+Received: by mail-qa0-f51.google.com with SMTP id j40so935886qab.10
+        for <keram@trip.sk>; Sun, 21 Oct 2012 14:17:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=QucvqGwbPy2hbQ4U0ekeDyIOifnd5UOd/w5K2DhBx34=;
+        b=cXZ02mRxvmbzKMSU71Ueuq8LHletetjOciGzFRRk853yAVzjsovD+Os8PFkE1pnivL
+         wt9oc16Om/Ose2xdWtm/MmVcbutTHo5yECH+p1HPXvPiTwH7tEaTnY0HIwYJAabD+UvQ
+         k7tjmw7tytyxrtTWlJyFJ0Tfmt7SkIJf/umPWvUVBloDomIyo/VKmoKr2halm0PY+Y3R
+         2JEy9Wkh7nTqpYJPga7lqyRy44yl4QxC5qydYSUYFoQKp6r86WnUOVekAkHbzcsicwy8
+         aWe/eW3vZx3gnP+moxTOu/YMtdKiEJcQ47+sJrx9I0UMJu7MxD2xLN9ENAf9lr3XLksh
+         JXSQ==
+MIME-Version: 1.0
+Received: by 10.49.75.3 with SMTP id y3mr3954396qev.12.1350854252592; Sun, 21
+ Oct 2012 14:17:32 -0700 (PDT)
+Received: by 10.49.83.34 with HTTP; Sun, 21 Oct 2012 14:17:32 -0700 (PDT)
+In-Reply-To: <121017120939M7.66259@sap.private.fio.cz>
+References: <121017120939M7.66259@sap.private.fio.cz>
+Date: Sun, 21 Oct 2012 23:17:32 +0200
+Message-ID: <CAO_VWex0KP1z-VO+fNYgZDQFkEMuu48CCs2BY-32+Dhahup1bQ@mail.gmail.com>
+Subject: Fwd: [Progressbar-core] Fio banka - prijem na konte
+From: Marek Labos <keraml@gmail.com>
+To: Marek L <keram@trip.sk>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ----------
+From:  <automat@fio.cz>
+Date: Wed, Oct 17, 2012 at 12:09 PM
+Subject: [Progressbar-core] Fio banka - prijem na konte
+To: core@lists.progressbar.sk
+
+
+P=C5=99=C3=ADjem na kont=C4=9B: 2600121198
+=C4=8C=C3=A1stka: 20,00
+VS:
+Zpr=C3=A1va p=C5=99=C3=ADjemci: PROGRESSBARtest
+Aktu=C3=A1ln=C3=AD z=C5=AFstatek: 1 703,36
+Proti=C3=BA=C4=8Det: 520700-4200304883/8360
+SS:
+KS:
+_______________________________________________
+Core mailing list
+Core@lists.progressbar.sk
+http://lists.progressbar.sk/mailman/listinfo/core
