@@ -2,7 +2,7 @@ development:
   mailman:
     maildir: tmp/test_maildir
     ignore_stdin: false
-  fio_bank_email: 'keraml@gmail.com'
+  fio_bank_email: 'automat@fio.cz'
   api_server_url: 'http://localhost:3000'
   api_server_secret_key: 'secret'
   api_server_secret_token: 'secret'
@@ -10,7 +10,7 @@ development:
     use_log_file: false
     log_file: log/development.log
 test:
-  fio_bank_email: 'keraml@gmail.com'
+  fio_bank_email: 'automat@fio.cz'
   api_server_url: 'http://localhost:3000'
   api_server_secret_key: 'secret'
   api_server_secret_token: 'secret'
@@ -19,23 +19,17 @@ test:
     log_file: log/test.log
   mailman:
     maildir: tmp/test_maildir
-    ignore_stdin: true
-    pop3:
-      server: pop.gmail.com
-      port: 995
-      ssl: true
-      username: cypruspace@gmail.com
-      password: klubova_sachovnica42
+    ignore_stdin: false
 production:
   fio_bank_email: 'automat@fio.cz'
-  api_server_url: 'http://localhost:3000'
+  api_server_url: 'https://www.progressbar.sk'
   api_server_secret_key: 'secret'
   api_server_secret_token: 'secret'
   logger:
     use_log_file: true
     log_file: log/production.log
   mailman:
-    ignore_stdin: false
+    ignore_stdin: true
     poll_interval: 60
     pop3:
       server: pop.gmail.com
