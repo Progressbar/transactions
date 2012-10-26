@@ -46,11 +46,11 @@ class FioBankMail < IncomingMail
     raise Exception, 'from account parse error' if from_account_rgxp.nil?
     raise Exception, 'amount parse error' if amount_rgxp.nil?
 
-    data[:to_account] = to_account_rgxp[1]
-    data[:from_account] = from_account_rgxp[1]
-    data[:amount] = amount_rgxp[1]
-    data[:vs] = vs_rgxp[1] if vs_rgxp
-    data[:message] = message_rgxp[1] if message_rgxp
+    data[:to_account] = to_account_rgxp[1].strip
+    data[:from_account] = from_account_rgxp[1].strip
+    data[:amount] = amount_rgxp[1].strip
+    data[:vs] = vs_rgxp[1].strip if vs_rgxp
+    data[:message] = message_rgxp[1].strip if message_rgxp
 
     data
   end

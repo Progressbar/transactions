@@ -4,4 +4,4 @@ require 'rubygems'
 require "bundler/setup"
 require 'daemons'
 
-Daemons.run('script/mailman_server')
+Daemons.run(File.join(File.dirname(__FILE__), 'mailman_server.rb'))

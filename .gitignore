@@ -88,3 +88,4 @@ config/environments/production.rb
 *.sublime-workspace
 public/images/content/*
 config/initializers/secret_token.rb
+config/config.yml

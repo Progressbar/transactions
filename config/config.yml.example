@@ -1,0 +1,45 @@
+development:
+  mailman:
+    maildir: tmp/test_maildir
+    ignore_stdin: false
+  fio_bank_email: 'keraml@gmail.com'
+  api_server_url: 'http://localhost:3000'
+  api_server_secret_key: 'secret'
+  api_server_secret_token: 'secret'
+  logger:
+    use_log_file: false
+    log_file: log/development.log
+test:
+  fio_bank_email: 'keraml@gmail.com'
+  api_server_url: 'http://localhost:3000'
+  api_server_secret_key: 'secret'
+  api_server_secret_token: 'secret'
+  logger:
+    use_log_file: true
+    log_file: log/test.log
+  mailman:
+    maildir: tmp/test_maildir
+    ignore_stdin: true
+    pop3:
+      server: pop.gmail.com
+      port: 995
+      ssl: true
+      username: cypruspace@gmail.com
+      password: klubova_sachovnica42
+production:
+  fio_bank_email: 'automat@fio.cz'
+  api_server_url: 'http://localhost:3000'
+  api_server_secret_key: 'secret'
+  api_server_secret_token: 'secret'
+  logger:
+    use_log_file: true
+    log_file: log/production.log
+  mailman:
+    ignore_stdin: false
+    poll_interval: 60
+    pop3:
+      server: pop.gmail.com
+      port: 995
+      ssl: true
+      username: user
+      password: pass
