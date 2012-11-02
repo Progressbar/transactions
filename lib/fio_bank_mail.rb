@@ -36,15 +36,16 @@ class FioBankMail < IncomingMail
 
   def parse_income body
     data = { :primary_type => 'income' }
+
     to_account_rgxp = body.match '^Příjem na kontě: (.+)$'
     from_account_rgxp = body.match '^Protiúčet: (.+)$'
     amount_rgxp = body.match '^Částka: (.+)$'
     vs_rgxp = body.match '^VS: (.+)$'
     message_rgxp = body.match '^Zpráva příjemci: (.+)$'
 
-    raise Exception, 'to account parse error' if to_account_rgxp.nil?
-    raise Exception, 'from account parse error' if from_account_rgxp.nil?
-    raise Exception, 'amount parse error' if amount_rgxp.nil?
+    raise Exception, 'income: to account parse error' if to_account_rgxp.nil?
+    raise Exception, 'income: from account parse error' if from_account_rgxp.nil?
+    raise Exception, 'income: amount parse error' if amount_rgxp.nil?
 
     data[:to_account] = to_account_rgxp[1].strip
     data[:from_account] = from_account_rgxp[1].strip
@@ -57,15 +58,15 @@ class FioBankMail < IncomingMail
 
   def parse_outcome body
     data = { :primary_type => 'outcome' }
-    to_account_rgxp = body.match '\nPVýdaj na kontě: ([^\s]+)'
-    from_account_rgxp = body.match '\nProtiúčet: ([^\s]+)'
-    amount_rgxp = body.match '\nČástka: ([0-9, \.]+)'
-    vs_rgxp = body.match '\nVS: ([0-9]+)'
+    to_account_rgxp = body.match '\nVýdaj na kontě: (.+)$'
+    from_account_rgxp = body.match '\nProtiúčet: (.+)$'
+    amount_rgxp = body.match '\nČástka: (.+)$'
+    vs_rgxp = body.match '\nVS: (.+)$'
     message_rgxp ='\nUS: (.*)'
 
-    raise Exception, 'to account parse error' if to_account_rgxp.nil?
-    raise Exception, 'from account parse error' if from_account_rgxp.nil?
-    raise Exception, 'amount parse error' if amount_rgxp.nil?
+    raise Exception, 'outcome: to account parse error' if to_account_rgxp.nil?
+    raise Exception, 'outcome: from account parse error' if from_account_rgxp.nil?
+    raise Exception, 'outcome: amount parse error' if amount_rgxp.nil?
 
     data[:to_account] = to_account_rgxp[1]
     data[:from_account] = from_account_rgxp[1]

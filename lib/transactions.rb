@@ -83,5 +83,7 @@ module Transactions
       end
     end
 
+  rescue
+    Mailman.logger.info "problem: #{$!.message}"
  	end
  end
