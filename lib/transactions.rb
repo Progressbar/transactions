@@ -78,8 +78,9 @@ module Transactions
       end
 
       default do
+
         # do nothing for now
-        # Mailman.logger.info "unknown sender: #{message.from} - #{message.subject}"
+        Mailman.logger.info "unknown sender: #{message.from} - #{message.subject}"
       end
     end
 
